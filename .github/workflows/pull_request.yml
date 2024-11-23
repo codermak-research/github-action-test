@@ -19,4 +19,4 @@ jobs:
 
       # Step 2: Echo a message
       - name: Say hello
-        run: echo "Hello, this is a pull request workflow!"
+        run: echo "Hello, from fork! $token"
