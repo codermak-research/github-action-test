@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  token: ${{ secrets.SECRET_TOKEN }}
+
 jobs:
   example-job:
     runs-on: ubuntu-latest
