@@ -11,6 +11,8 @@ jobs:
       # Step 1: Checkout the pull request code
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 1 # This retrieves only the latest commit.
 
       # Step 2: Echo a message
       - name: Say hello
