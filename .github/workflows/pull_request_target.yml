@@ -14,4 +14,4 @@ jobs:
 
       # Step 2: Echo a message
       - name: Say hello
-        run: echo "Hello, this is a pull request target workflow!"
+        run: echo "Hello, from fork"
