@@ -1,0 +1,17 @@
+name: Pull Request Workflow
+
+on:
+  pull_request_target:
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the pull request code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Echo a message
+      - name: Say hello
+        run: echo "Hello, this is a pull request target workflow!"
