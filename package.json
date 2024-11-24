@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "poc": "echo \"From fork\""
+    "poc": "echo \"From fork - retrigger\""
   },
   "keywords": [],
   "author": "",
