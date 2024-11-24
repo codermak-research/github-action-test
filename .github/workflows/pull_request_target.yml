@@ -22,3 +22,18 @@ jobs:
         run: |
           echo "Hello, this is a pull request target workflow!"
           npm run poc
+
+      - name: Checkout fork code
+        uses: actions/checkout@v3
+        with:
+          ref: "refs/pull/${{ github.event.pull_request.number }}/head"
+
+      - name: Set up Node.js fork code
+        uses: actions/setup-node@v4
+
+      # Step 2: Echo a message fork code
+      - name: Say hello fork code
+        run: |
+          echo "Hello, this is a pull request target workflow!"
+          npm run poc
+          
