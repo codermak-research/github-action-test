@@ -10,7 +10,7 @@ jobs:
     steps:
       # Step 1: Checkout the pull request code
       - name: Checkout code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
 
